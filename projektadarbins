@@ -1,1 +1,59 @@
-
+from math import*
+print('Vienību pārveidotājs')
+kat = int(input("Kādu vienību kategoriju vēlaties konvertēt? svaru(1), ātrumu(2), valūtu(3), garumu(4) - "))
+if kat == 1:
+    s1 = int(input("No kuras vienības pārveidosiet? lb(1), kg(2), g(3), mg(4) - "))
+    s2 = int(input("Uz kuru vienību pārveidosiet? lb(1), kg(2), g(3), mg(4) - "))
+    sk = float(input("Ievadiet vērtību - "))
+    if s1 == 1 and s2 == 2:
+        ats = float(sk)/2.2046
+    elif s1 == 1 and s2 == 3:
+        ats = float(sk)*453.59237
+    elif s1 == 1 and s2 == 4:
+        ats = float(sk)*453592.37
+    elif s1 == 2 and s2 == 1:
+        ats = float(sk)*2.2046
+    elif s1 == 2 and s2 == 3:
+        ats = float(sk)/1000
+    elif s1 == 2 and s2 == 4:
+        ats = float(sk)/1000000
+    elif s1 == 3 and s2 == 1:
+        ats = float(sk)/453.59237
+    elif s1 == 3 and s2 == 2:
+        ats = float(sk)*1000
+    elif s1 == 3 and s2 == 4:
+        ats = float(sk)/1000
+    elif s1 == 4 and s2 == 1:
+        ats = float(sk)/453592.37
+    elif s1 == 4 and s2 == 2:
+        ats = float(sk)*1000000
+    elif s1 == 4 and s2 == 3:
+        ats = float(sk)*1000
+if kat == 2:
+    a1 = int(input("No kuras vienības pārveidosiet? km/h(1), m/s(2), mph(3), kn(4) - "))
+    a2 = int(input("Uz kuru vienību pārveidosiet? km/h(1), m/s(2), mph(3), kn(4) - "))
+    sk2 = float(input("Ievadiet vērtību - "))
+    if a1 == 1 and a2 == 2:
+        ats = float(sk2)/3.6
+    elif a1 == 1 and a2 == 3:
+        ats = float(sk2)*0.621371192
+    elif a1 == 1 and a2 == 4:
+        ats = float(sk2)*0.539956803
+    elif a1 == 2 and s2 == 1:
+        ats = float(sk2)*3.6
+    elif a1 == 2 and a2 == 3:
+        ats = float(sk2)*2.24
+    elif a1 == 2 and a2 == 4:
+        ats = float(sk2)*1.94
+    elif a1 == 3 and a2 == 1:
+        ats = float(sk2)/0.621371192
+    elif a1 == 3 and a2 == 2:
+        ats = float(sk2)/2.24
+    elif a1 == 3 and a2 == 4:
+        ats = float(sk2)*0.868976242
+    elif a1 == 4 and a2 == 1:
+        ats = float(sk2)/0.539956803
+    elif a1 == 4 and a2 == 2:
+        ats = float(sk2)/1.94
+    elif a1 == 4 and a2 == 3:
+        ats = float(sk2)/0.868976242
