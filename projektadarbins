@@ -1,298 +1,223 @@
 print('Vienību pārveidotājs')
+
+def reiz(sk,b):
+    ats = float(sk)*b
+    print('Rezultāts -', ats)
+
+def dal(sk, b):
+    ats = float(sk)/b
+    print('Rezultāts -', ats)
+
 kat = int(input("Kādu vienību kategoriju vēlaties pārveidot? svaru(1), ātrumu(2), valūtu(3)(04.2022), garumu(4) - "))
 if kat == 1:
     s1 = int(input("No kuras vienības pārveidosiet? lb(1), kg(2), g(3), mg(4) - "))
     s2 = int(input("Uz kuru vienību pārveidosiet? lb(1), kg(2), g(3), mg(4) - "))
     sk = float(input("Ievadiet vērtību - "))
+
     if s1 == 1 and s2 == 2:
-        ats = float(sk)*0.45359237
-        print('Rezultāts -',ats)
+        reiz(sk, 0.45359237)
     elif s1 == 1 and s2 == 3:
-        ats = float(sk)*453.59237
-        print('Rezultāts -',ats)
+        reiz(sk, 453.59237)
     elif s1 == 1 and s2 == 4:
-        ats = float(sk)*453592.37
-        print('Rezultāts -',ats)
+        reiz(sk, 453592.37)
     elif s1 == 2 and s2 == 1:
-        ats = float(sk)*2.2046
-        print('Rezultāts -',ats)
+        reiz(sk, 2.2046)
     elif s1 == 2 and s2 == 3:
-        ats = float(sk)*1000
-        print('Rezultāts -',ats)
+        reiz(sk, 1000)
     elif s1 == 2 and s2 == 4:
-        ats = float(sk)/1000000
-        print('Rezultāts -',ats)
+        dal(sk, 1000000)
     elif s1 == 3 and s2 == 1:
-        ats = float(sk)/453.59237
-        print('Rezultāts -',ats)
+        dal(sk, 453.59237)
     elif s1 == 3 and s2 == 2:
-        ats = float(sk)/1000
-        print('Rezultāts -',ats)
+        dal(sk, 1000)
     elif s1 == 3 and s2 == 4:
-        ats = float(sk)*1000
-        print('Rezultāts -',ats)
+        reiz(sk, 1000)
     elif s1 == 4 and s2 == 1:
-        ats = float(sk)/453592.37
-        print('Rezultāts -',ats)
+        dal(sk, 453592.37)
     elif s1 == 4 and s2 == 2:
-        ats = float(sk)/1000000
-        print('Rezultāts -',ats)
+        dal(sk, 1000000)
     elif s1 == 4 and s2 == 3:
-        ats = float(sk)/1000
-        print('Rezultāts -',ats)
-    else: print('nepareizi ievadīti dati')
+        dal(sk, 1000)
+    elif s1 == s2: print('Tā pati vērtība')
+    else: print('Nepareizi ievadīti dati')
+    
 if kat == 2:
     a1 = int(input("No kuras vienības pārveidosiet? km/h(1), m/s(2), mph(3), kn(4) - "))
     a2 = int(input("Uz kuru vienību pārveidosiet? km/h(1), m/s(2), mph(3), kn(4) - "))
     sk2 = float(input("Ievadiet vērtību - "))
     if a1 == 1 and a2 == 2:
-        ats = float(sk2)*3.6
-        print('Rezultāts -',ats)
+        reiz(sk2, 3.6)
     elif a1 == 1 and a2 == 3:
-        ats = float(sk2)*0.621371192
-        print('Rezultāts -',ats)
+        reiz(sk2, 0.621371192)
     elif a1 == 1 and a2 == 4:
-        ats = float(sk2)*0.539956803
-        print('Rezultāts -',ats)
+        reiz(sk2, 0.539956803)
     elif a1 == 2 and a2 == 1:
-        ats = float(sk2)/3.6
-        print('Rezultāts -',ats)
+        dal(sk2, 3.6)
     elif a1 == 2 and a2 == 3:
-        ats = float(sk2)*2.24
-        print('Rezultāts -',ats)
+        reiz(sk2, 2.24)
     elif a1 == 2 and a2 == 4:
-        ats = float(sk2)*1.94
-        print('Rezultāts -',ats)
+        reiz(sk2, 1.94)
     elif a1 == 3 and a2 == 1:
-        ats = float(sk2)/0.621371192
-        print('Rezultāts -',ats)
+        dal(sk2, 0.621371192)
     elif a1 == 3 and a2 == 2:
-        ats = float(sk2)/2.24
-        print('Rezultāts -',ats)
+        dal(sk2, 2.24)
     elif a1 == 3 and a2 == 4:
-        ats = float(sk2)*0.868976242
-        print('Rezultāts -',ats)
+        reiz(sk2, 0.868976242)
     elif a1 == 4 and a2 == 1:
-        ats = float(sk2)/0.539956803
-        print('Rezultāts -',ats)
+        dal(sk2, 0.539956803)
     elif a1 == 4 and a2 == 2:
-        ats = float(sk2)/1.94
-        print('Rezultāts -',ats)
+        dal(sk2, 1.94)
     elif a1 == 4 and a2 == 3:
-        ats = float(sk2)/0.868976242
-        print('Rezultāts -',ats)
-    else: print('nepareizi ievadīti dati')    
+        dal(sk2, 0.868976242)
+    elif a1 == a2: print('Tā pati vērtība')
+    else: print('Nepareizi ievadīti dati')
+    
 if kat == 3:
     v1 = int(input("No kuras vienības pārveidosiet? EUR(1), USD(2), RUB(3), BTC(4) - "))
     v2 = int(input("Uz kuru vienību pārveidosiet? EUR(1), USD(2), RUB(3), BTC(4) - "))
     sk3 = float(input("Ievadiet vērtību - "))
     if v1 == 1 and v2 == 2:
-        ats = float(sk3)*1.10
-        print('Rezultāts -',ats)
+        reiz(sk3, 1.10)
     elif v1 == 1 and v2 == 3:
-        ats = float(sk3)*94.71
-        print('Rezultāts -',ats)
+        reiz(sk3, 94.71)
     elif v1 == 1 and v2 == 4:
-        ats = float(sk3)*0.000024
-        print('Rezultāts -',ats)
+        reiz(sk3, 0.000024)
     elif v1 == 2 and v2 == 1:
-        ats = float(sk3)/1.10
-        print('Rezultāts -',ats)
+        dal(sk3, 1.10)
     elif v1 == 2 and v2 == 3:
-        ats = float(sk3)*85.75
-        print('Rezultāts -',ats)
+        reiz(sk3, 85.75)
     elif v1 == 2 and v2 == 4:
-        ats = float(sk3)*0.000021
-        print('Rezultāts -',ats)
+        reiz(sk3, 0.000021)
     elif v1 == 3 and v2 == 1:
-        ats = float(sk3)/94.71
-        print('Rezultāts -',ats)
+        dal(sk3, 94.71)
     elif v1 == 3 and v2 == 2:
-        ats = float(sk3)/85.75
-        print('Rezultāts -',ats)
+        dal(sk3, 85.75)
     elif v1 == 3 and v2 == 4:
-        ats = float(sk3)*0.0000002499054285
-        print('Rezultāts -',ats)
+        reiz(sk3, 0.0000002499054285)
     elif v1 == 4 and v2 == 1:
-        ats = float(sk3)/0.000024
-        print('Rezultāts -',ats)
+        dal(sk3, 0.000024)
     elif v1 == 4 and v2 == 2:
-        ats = float(sk3)/0.000021
-        print('Rezultāts -',ats)
+        dal(sk3, 0.000021)
     elif v1 == 4 and v2 == 3:
-        ats = float(sk3)/0.0000002499054285
-        print('Rezultāts -',ats)
-    else: print('nepareizi ievadīti dati')
+        dal(sk3, 0.0000002499054285)
+    elif v1 == v2: print('Tā pati vērtība')
+    else: print('Nepareizi ievadīti dati')
+    
 if kat == 4:
     g1 = int(input("No kuras vienības pārveidosiet? km(1), dm(2), cm(3), m(4), mi(5), ft(6), in(7), ly(8) - "))
     g2 = int(input("Uz kuru vienību pārveidosiet?  km(1), dm(2), cm(3), m(4), mi(5), ft(6), in(7), ly(8) - "))
     sk4 = float(input("Ievadiet vērtību - "))
     if g1 == 1 and g2 == 2:
-        ats = float(sk4)*10000
-        print('Rezultāts -',ats)
+        reiz(sk4, 10000)
     elif g1 == 1 and g2 == 3:
-        ats = float(sk4)*100000
-        print('Rezultāts -',ats)
+        reiz(sk4, 100000)
     elif g1 == 1 and g2 == 4:
-        ats = float(sk4)*1000
-        print('Rezultāts -',ats)
+        reiz(sk4, 1000)
     elif g1 == 1 and g2 == 5:
-        ats = float(sk4)*0.621371192
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.621371192)
     elif g1 == 1 and g2 == 6:
-        ats = float(sk4)*3280.8399
-        print('Rezultāts -',ats)
+        reiz(sk4, 3280.8399)
     elif g1 == 1 and g2 == 7:
-        ats = float(sk4)*39370.0787
-        print('Rezultāts -',ats)
+        reiz(sk4, 39370.0787)
     elif g1 == 1 and g2 == 8:
-        ats = float(sk4)*0.00000000000010570008340247
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.00000000000010570008340247)
     elif g1 == 2 and g2 == 1:
-        ats = float(sk4)/10000
-        print('Rezultāts -',ats)
+        dal(sk4, 10000)
     elif g1 == 2 and g2 == 3:
-        ats = float(sk4)*10
-        print('Rezultāts -',ats)
+        reiz(sk4, 10)
     elif g1 == 2 and g2 == 4:
-        ats = float(sk4)/10
-        print('Rezultāts -',ats)
+        dal(sk4, 10)
     elif g1 == 2 and g2 == 5:
-        ats = float(sk4)*0.0000621371192
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.0000621371192)
     elif g1 == 2 and g2 == 6:
-        ats = float(sk4)*0.32808399
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.32808399)
     elif g1 == 2 and g2 == 7:
-        ats = float(sk4)*3.93700787
-        print('Rezultāts -',ats)
+        reiz(sk4, 3.93700787)
     elif g1 == 2 and g2 == 8:
-        ats = float(sk4)*0.0000000000000000105702
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.0000000000000000105702)
     elif g1 == 3 and g2 == 1:
-        ats = float(sk4)/100000
-        print('Rezultāts -',ats)
+        dal(sk4, 100000)
     elif g1 == 3 and g2 == 2:
-        ats = float(sk4)/10
-        print('Rezultāts -',ats)
+        dal(sk4, 10)
     elif g1 == 3 and g2 == 4:
-        ats = float(sk4)/100
-        print('Rezultāts -',ats)
+        dal(sk4, 100)
     elif g1 == 3 and g2 == 5:
-        ats = float(sk4)*0.00000621371192
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.00000621371192)
     elif g1 == 3 and g2 == 6:
-        ats = float(sk4)*0.032808399
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.032808399)
     elif g1 == 3 and g2 == 7:
-        ats = float(sk4)*0.393700787
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.393700787)
     elif g1 == 3 and g2 == 8:
-        ats = float(sk4)*0.000000000000000001057000834
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.000000000000000001057000834)
     elif g1 == 4 and g2 == 1:
-        ats = float(sk4)/1000
-        print('Rezultāts -',ats)
+        dal(sk4, 1000)
     elif g1 == 4 and g2 == 2:
-        ats = float(sk4)*10
-        print('Rezultāts -',ats)
+        reiz(sk4, 10)
     elif g1 == 4 and g2 == 3:
-        ats = float(sk4)*100
-        print('Rezultāts -',ats)
+        reiz(sk4, 100)
     elif g1 == 4 and g2 == 5:
-        ats = float(sk4)*0.000621371192
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.000621371192)
     elif g1 == 4 and g2 == 6:
-        ats = float(sk4)*3.2808399
-        print('Rezultāts -',ats)
+        reiz(sk4, 3.2808399)
     elif g1 == 4 and g2 == 7:
-        ats = float(sk4)*39.3700787
-        print('Rezultāts -',ats)
+        reiz(sk4, 39.3700787)
     elif g1 == 4 and g2 == 8:
-        ats = float(sk4)*0.00000000000000010570008340247
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.00000000000000010570008340247)
     elif g1 == 5 and g2 == 1:
-        ats = float(sk4)/0.621371192
-        print('Rezultāts -',ats)
+        dal(sk4, 0.621371192)
     elif g1 == 5 and g2 == 2:
-        ats = float(sk4)/0.0000621371192
-        print('Rezultāts -',ats)
+        dal(sk4, 0.0000621371192)
     elif g1 == 5 and g2 == 3:
-        ats = float(sk4)/0.00000621371192
-        print('Rezultāts -',ats)
+        dal(sk4, 0.00000621371192)
     elif g1 == 5 and g2 == 4:
-        ats = float(sk4)*1609.344
-        print('Rezultāts -',ats)
+        reiz(sk4, 1609.344)
     elif g1 == 5 and g2 == 6:
-        ats = float(sk4)*5280
-        print('Rezultāts -',ats)
+        reiz(sk4, 5280)
     elif g1 == 5 and g2 == 7:
-        ats = float(sk4)*63360
-        print('Rezultāts -',ats)
+        reiz(sk4, 63360)
     elif g1 == 5 and g2 == 8:
-        ats = float(sk4)*0.000000000000170107795
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.000000000000170107795)
     elif g1 == 6 and g2 == 1:
-        ats = float(sk4)/3280.8399
-        print('Rezultāts -',ats)
+        dal(sk4, 3280.8399)
     elif g1 == 6 and g2 == 2:
-        ats = float(sk4)/0.32808399
-        print('Rezultāts -',ats)
+        dal(sk4, 0.32808399)
     elif g1 == 6 and g2 == 3:
-        ats = float(sk4)/0.032808399
-        print('Rezultāts -',ats)
+        dal(sk4, 0.032808399)
     elif g1 == 6 and g2 == 4:
-        ats = float(sk4)*0.30484
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.30484)
     elif g1 == 6 and g2 == 5:
-        ats = float(sk4)/5280
-        print('Rezultāts -',ats)
+        dal(sk4, 5280)
     elif g1 == 6 and g2 == 7:
-        ats = float(sk4)*12
-        print('Rezultāts -',ats)
+        reiz(sk4, 12)
     elif g1 == 6 and g2 == 8:
-        ats = float(sk4)*0.0000000000000000322180735527319
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.0000000000000000322180735527319)
     elif g1 == 7 and g2 == 1:
-        ats = float(sk4)/39370.0787
-        print('Rezultāts -',ats)
+        dal(sk4, 39370.0787)
     elif g1 == 7 and g2 == 2:
-        ats = float(sk4)/3.93700787
-        print('Rezultāts -',ats)
+        dal(sk4, 3.93700787)
     elif g1 == 7 and g2 == 3:
-        ats = float(sk4)/0.393700787
-        print('Rezultāts -',ats)
+        dal(sk4, 0.393700787)
     elif g1 == 7 and g2 == 4:
-        ats = float(sk4)*0.0254
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.0254)
     elif g1 == 7 and g2 == 5:
-        ats = float(sk4)/63360
-        print('Rezultāts -',ats)
+        dal(sk4, 63360)
     elif g1 == 7 and g2 == 6:
-        ats = float(sk4)/12
-        print('Rezultāts -',ats)
+        dal(sk4, 12)
     elif g1 == 7 and g2 == 8:
-        ats = float(sk4)*0.0000000000000000026848
-        print('Rezultāts -',ats)
+        reiz(sk4, 0.0000000000000000026848)
     elif g1 == 8 and g2 == 1:
-        ats = float(sk4)/0.00000000000010570008340247
-        print('Rezultāts -',ats)
+        dal(sk4, 0.00000000000010570008340247)
     elif g1 == 8 and g2 == 2:
-        ats = float(sk4)/0.0000000000000000105702
-        print('Rezultāts -',ats)
+        dal(sk4, 0.0000000000000000105702)
     elif g1 == 8 and g2 == 3:
-        ats = float(sk4)/0.000000000000000001057000834
-        print('Rezultāts -',ats)
+        dal(sk4, 0.000000000000000001057000834)
     elif g1 == 8 and g2 == 4:
-        ats = float(sk4)/0.00000000000000010570008340247
-        print('Rezultāts -',ats)
+        dal(sk4, 0.00000000000000010570008340247)
     elif g1 == 8 and g2 == 5:
-        ats = float(sk4)/0.000000000000170107795
-        print('Rezultāts -',ats)
+        dal(sk4, 0.000000000000170107795)
     elif g1 == 8 and g2 == 6:
-        ats = float(sk4)/0.0000000000000000322180735527319
-        print('Rezultāts -',ats)
+        dal(sk4, 0.0000000000000000322180735527319)
     elif g1 == 8 and g2 == 7:
-        ats = float(sk4)/0.0000000000000000026848
-        print('Rezultāts -',ats)
-    else: print('nepareizi ievadīti dati') 
+        dal(sk4, 0.0000000000000000026848)
+    elif g1 == g2: print('Tā pati vērtība')
+    else: print('Nepareizi ievadīti dati')
